@@ -1,7 +1,9 @@
 export default function Header() {
   return (
     <>
-      <h1>Image Gallery</h1>
+      <h1 className="text-center text-4xl font-semibold mt-3 mb-6">
+        Butterfly Gallery
+      </h1>
     </>
   );
 }
