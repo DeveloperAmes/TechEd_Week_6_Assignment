@@ -22,13 +22,13 @@ export default function Gallery() {
   return (
     <>
       <section>
-        <div className="thumbnail-container flex gap-4 justify-center overflow-auto ml-4 mr-4">
+        <div className="thumbnail-container w-full flex gap-3 overflow-x-auto">
           {thumbnails.map((thumbnail) => {
             return <ThumbnailImg thumbnail={thumbnail} />;
           })}
         </div>
       </section>
-      <section className="border-solid border-black border-5">
+      <section className="border-solid border-white border-5">
         {mainImg.map((largeImg) => {
           return <MainImg largeImg={largeImg} />;
         })}
