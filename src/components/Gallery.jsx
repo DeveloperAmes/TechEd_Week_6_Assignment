@@ -5,7 +5,7 @@ import MainImg from "./MainImg";
 
 export default function Gallery() {
   const [thumbnails, setThumbnails] = useState([]);
-  const [mainImg, setMainImg] = useState([]);
+  const [mainImg, setMainImg] = useState(1);
   useEffect(() => {
     async function fetchImages() {
       const response = await fetch(
@@ -15,7 +15,6 @@ export default function Gallery() {
       );
       const data = await response.json();
       setThumbnails(data.results);
-      setMainImg(data.results);
     }
     fetchImages();
   }, []);
@@ -23,15 +22,20 @@ export default function Gallery() {
     <>
       <section>
         <div className="thumbnail-container w-full flex gap-3 overflow-x-auto">
-          {thumbnails.map((thumbnail) => {
-            return <ThumbnailImg thumbnail={thumbnail} />;
+          {thumbnails.map((thumbnail, index) => {
+            return (
+              <ThumbnailImg
+                key={thumbnail.id}
+                thumbnail={thumbnail}
+                setMainImg={setMainImg}
+                index={index}
+              />
+            );
           })}
         </div>
       </section>
       <section className="border-solid border-white border-5">
-        {mainImg.map((largeImg) => {
-          return <MainImg largeImg={largeImg} />;
-        })}
+        <MainImg largeImg={thumbnails[mainImg]} />;
       </section>
     </>
   );
