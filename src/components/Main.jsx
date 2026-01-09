@@ -1,5 +1,9 @@
-import ImageGallery from "./ThumbnailGallery";
+import Gallery from "./Gallery";
 
 export default function Main() {
-  return <ImageGallery />;
+  return (
+    <>
+      <Gallery />
+    </>
+  );
 }
