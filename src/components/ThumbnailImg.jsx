@@ -2,13 +2,14 @@ export default function ThumbnailImg({ thumbnail, setMainImg, index }) {
   return (
     <img
       onKeyDown={(event) => {
-        if (event.key === "Enter") setMainImg(index);
+        if (event.key === "Enter" || event.key === " ") {
+          setMainImg(index);
+        }
       }}
       onClick={() => {
         setMainImg(index);
-        console.log("Clicked");
       }}
-      className="h-25 hover:border-white hover:border-solid hover:border-4 focus:border-white focus:border-solid focus:border-4"
+      className="h-16 hover:outline-white hover:outline-solid hover:outline-4 focus-visible:outline-white focus-visible:outline-solid focus-visible:outline-4 mt-4 mb-4"
       tabIndex={0}
       key={thumbnail.id}
       src={thumbnail.urls.thumb}

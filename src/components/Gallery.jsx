@@ -21,7 +21,7 @@ export default function Gallery() {
   return (
     <>
       <section>
-        <div className="thumbnail-container w-full flex gap-3 overflow-x-auto">
+        <div className="thumbnail-container w-full flex gap-3 overflow-x-auto ml-2 mr-3 scrollbar-thin scrollbar-thumb-white scrollbar-track-black">
           {thumbnails.map((thumbnail, index) => {
             return (
               <ThumbnailImg
@@ -34,8 +34,8 @@ export default function Gallery() {
           })}
         </div>
       </section>
-      <section className="border-solid border-white border-5">
-        <MainImg largeImg={thumbnails[mainImg]} />;
+      <section className="">
+        <MainImg largeImg={thumbnails[mainImg]} />
       </section>
     </>
   );
