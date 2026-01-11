@@ -1,6 +1,6 @@
 export default function Search() {
   return (
-    <section className="w-screen flex flex-row justify-center m-2 gap-3 md:flex-col md:w-24">
+    <section className="w-screen flex flex-row justify-center m-2 gap-3">
       <input
         type="search"
         name="search"

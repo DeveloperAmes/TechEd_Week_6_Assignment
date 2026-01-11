@@ -9,7 +9,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-white m-auto font-oxygen;
+    @apply bg-black text-white m-auto font-oxygen h-screen;
   }
   * {
     @apply scrollbar-thin;
