@@ -1,10 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 @import "tailwindcss";
 
 @plugin "tailwind-scrollbar";
 
+@theme {
+  --font-oxygen: "Oxygen", "sans-serif";
+}
+
 @layer base {
   body {
-    @apply bg-black text-white font-sans max-h-screen m-auto;
+    @apply bg-black text-white m-auto font-oxygen;
   }
   * {
     @apply scrollbar-thin;
